@@ -10,7 +10,7 @@ class RiakkaProject(info: ProjectInfo) extends DefaultProject(info) {
   val slf4j_simple = "org.slf4j" % "slf4j-simple" % "1.5.6"
 
   val scalatest = buildScalaVersion match {
-        case x: String if x.startsWith("2.7") => "org.scala-tools.testing" % "scalatest" % "0.9.5" % "test->default"
+        case x: String if x.startsWith("2.7") => "org.scalatest" % "scalatest" % "1.0" % "test->default"
         case "2.8.0.Beta1-RC1" => "org.scalatest" % "scalatest" % "1.0.1-for-scala-2.8.0.Beta1-RC1-SNAPSHOT" % "test->default"
         case x => error("Unsupported Scala version " + x)
       }
